@@ -74,5 +74,38 @@ class MainController extends Controller
         
         return $this->redirect('/');
     }
+
+    public function getAccessTokenAction(){
+
+        try {
+
+            $config = require(APP . '/config/config.php');
+
+            $provider = new \League\OAuth2\Client\Provider\GenericProvider([
+                'clientId'                => $config['client_id'],
+                'clientSecret'            => $config['client_secret'],
+                'redirectUri'             => $config['redirect_uri'],
+                'urlAuthorize'            => $config['oauth_endpoint'],
+                'urlAccessToken'          => $config['token_endpoint'],
+                'urlResourceOwnerDetails' => $config['resource'],
+                'scope' => $config['scope']
+            ]);
+
+            // Try to get an access token using the authorization code grant.
+            $accessToken = $provider->getAccessToken('authorization_code', [
+                'code' =>  $this->request->getGetParameters('code')
+            ]);
+
+            Session::put('token', $accessToken->getToken());
+            Session::put('refresh_token', $accessToken->getRefreshToken());
+
+        } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+
+            // Failed to get the access token or user details.
+            exit($e->getMessage());
+        }
+
+        return '<script>window.opener.location.reload(false);window.close();</script>';
+    }
     
 }
