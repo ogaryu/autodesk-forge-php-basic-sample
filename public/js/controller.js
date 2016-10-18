@@ -39,7 +39,7 @@ var AjaxFormController = function() {
             dataType: 'json',
             success : function(data){
                 
-                console.log("ajax forms response: " + data);
+                console.log(data);
 
                 if(formActionStr == 'login'){
                     var data = JSON.parse(data);
