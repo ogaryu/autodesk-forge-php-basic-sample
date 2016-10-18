@@ -46,7 +46,7 @@ class MainController extends Controller
             $authorizationUrl = $provider->getAuthorizationUrl();
 
             // Get the state generated for you and store it to the session.
-            $_SESSION['oauth2state'] = $provider->getState();
+            $this->session->set('oauth2state', $provider->getState());
 
             // Redirect the user to the authorization URL.
             // header('Location: ' . $authorizationUrl);
@@ -55,7 +55,7 @@ class MainController extends Controller
             // Check given state against previously stored one to mitigate CSRF attack
         } elseif(empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
 
-            unset($_SESSION['oauth2state']);
+            $this->session->remove('oauth2state');
             exit('Invalid state');
 
         }
@@ -65,9 +65,9 @@ class MainController extends Controller
 
     public function logoutAction()
     {
-        if(Session::get('token') != ""){
-            Session::forget('token');
-            Session::forget('refresh_token');
+        if($this->session->get('token') != ""){
+            $this->session->remove('token');
+            $this->session->remove('refresh_token');
             $this->token = "";
             $this->refresh_token = "";
         }
@@ -96,8 +96,8 @@ class MainController extends Controller
                 'code' =>  $this->request->getGetParameters('code')
             ]);
 
-            Session::put('token', $accessToken->getToken());
-            Session::put('refresh_token', $accessToken->getRefreshToken());
+            $this->session->set('token', $accessToken->getToken());
+            $this->session->set('refresh_token', $accessToken->getRefreshToken());
 
         } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
 
