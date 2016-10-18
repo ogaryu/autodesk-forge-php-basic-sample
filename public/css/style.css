@@ -1,0 +1,86 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic);
+body {
+    margin: 0;
+    padding: 0;
+    color: #212121;
+
+    font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+    font-weight: normal;
+
+    letter-spacing: 0.005em;
+    line-height: 20px;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: #3399CC;
+}
+
+#header {
+    background-color: #333333;
+    padding: 10px 20px;
+    border-bottom: 3px solid #CCCCCC;
+}
+
+#header h1 {
+    margin: 10px 10px;
+}
+
+#header h1 a {
+    color: #FFFFFF;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+#header h1 a:hover {
+    background-color: #BBBBBB;
+}
+
+#nav {
+    margin: 0 30px;
+}
+
+#main {
+    margin: 0 30px;
+}
+
+.status {
+    padding: 10px;
+    border-bottom: 2px solid #CCCCCC;
+    margin-bottom: 10px;
+}
+
+ul.error_list {
+    border: 1px solid #FF0000;
+    background-color: #FFCCCC;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul.error_list li {
+    color: #FF0000;
+}
+
+.panel-result {
+    border-color: #eea236;
+}
+
+.panel-result>.panel-heading {
+    color: #333333;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    background-image: -webkit-linear-gradient(top,#f2b968 0,#f0ad4e 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#f2b968),to(#f0ad4e));
+    background-image: linear-gradient(to bottom,#f2b968 0,#f0ad4e 100%);
+    background-repeat: repeat-x;
+}
+
+.panel-heading {
+    font-size: 18px;
+}
+
+.form-horizontal {
+    
+}

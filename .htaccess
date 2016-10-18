@@ -1,0 +1,5 @@
+# Tell PHP that the mod_rewrite module is ENABLED.
+SetEnv HTTP_MOD_REWRITE On
+RewriteEngine on
+RewriteRule ^$   public/    [L]    
+RewriteRule (.*) public/$1  [L]

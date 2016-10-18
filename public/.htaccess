@@ -1,0 +1,14 @@
+# Tell PHP that the mod_rewrite module is ENABLED.
+SetEnv HTTP_MOD_REWRITE On
+# Activates URL rewriting (like myproject.com/controller/action/1/2/3)
+RewriteEngine On
+# If the following conditions are true, then rewrite the URL:
+# If the requested filename is not a directory,
+RewriteCond %{REQUEST_FILENAME} !-d
+# and if the requested filename is not a regular file that exists,
+RewriteCond %{REQUEST_FILENAME} !-f
+# and if the requested filename is not a symbolic link,
+RewriteCond %{REQUEST_FILENAME} !-l
+
+#  RewriteRule ^(.*)$ index.php?_route=$1?%{QUERY_STRING} [PT,L]
+RewriteRule ^(.*)$ index_dev.php [QSA,L]
