@@ -71,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -182,7 +182,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="XAMPP PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="2" />
     <option name="y" value="22" />
     <option name="width" value="1439" />
     <option name="height" value="782" />
@@ -527,7 +527,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475201646325</updated>
       <workItem from="1475201648317" duration="15457000" />
-      <workItem from="1476706472010" duration="33396000" />
+      <workItem from="1476706472010" duration="33700000" />
     </task>
     <servers />
   </component>
@@ -540,10 +540,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48853000" />
+    <option name="totallyTimeSpent" value="49157000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="22" width="1439" height="782" extended-state="0" />
+    <frame x="2" y="22" width="1439" height="782" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -881,7 +881,7 @@
     <entry file="file://$PROJECT_DIR$/public/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
           <folding />
         </state>
       </provider>

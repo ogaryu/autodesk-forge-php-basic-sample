@@ -21,7 +21,7 @@ var AjaxFormController = function() {
         }
         
         if(formData == undefined || formData == ''){
-            formData = '{}';
+            formData = {action: formActionStr};
         }
 
         // $.ajaxSetup({
