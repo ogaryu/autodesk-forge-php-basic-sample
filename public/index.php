@@ -22,5 +22,7 @@ require APP . 'config/config.php';
 require APP . 'bootstrap.php';
 require APP . 'BasicApplication.php';
 
+require('../vendor/autoload.php');
+
 $app = new \Autodesk\Forge\PHP\Sample\BasicApplication();
 $app->run();
