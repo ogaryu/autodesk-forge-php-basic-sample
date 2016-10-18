@@ -1,9 +1,9 @@
 <?php
 
 return array(
-    'client_id'         => 'IeEWHZpk5YGjRU2YLNG71A9BkMXuwXHy',
-    'client_secret'     => 'arWiL4Bk0Nsnqay3',
-    'redirect_uri'      => 'https://bim360-iot.herokuapp.com/oauth/callback',
+    'client_id'         => '87XQJv5CnWDd2ocIoKNEcuJSZNOqCCEl',
+    'client_secret'     => 'NzOEKYdyAPdjgAKA',
+    'redirect_uri'      => 'https://forge-php-basic-sample.herokuapp.com/oauth/callback',
     'oauth_endpoint'    => 'https://developer.api.autodesk.com/authentication/v1/authorize',
     'token_endpoint'    => 'https://developer.api.autodesk.com/authentication/v1/gettoken',
     'resource'          => 'https://developer.api.autodesk.com/authentication/v1/resource',
