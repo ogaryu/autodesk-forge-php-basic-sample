@@ -42,7 +42,7 @@ var AjaxFormController = function() {
                 console.log(data);
 
                 if(formActionStr == 'login'){
-                    var data = JSON.parse(data);
+                    // var data = JSON.parse(data);
                     var authWindow = AuthenticationWindowView(data['url'], "Autodesk Login", 800, 400);
                     authWindow.onload = function() {};
                 }

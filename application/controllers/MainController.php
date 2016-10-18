@@ -50,7 +50,7 @@ class MainController extends Controller
 
             // Redirect the user to the authorization URL.
             // header('Location: ' . $authorizationUrl);
-            return $this->json_response(200, json_encode(['url'=> $authorizationUrl . '&response_type=code']));
+            return $this->json_response(200, json_encode(['url'=> $authorizationUrl . '&response_type=code&scope=' . $config['scope']]));
 
             // Check given state against previously stored one to mitigate CSRF attack
         } elseif(empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
