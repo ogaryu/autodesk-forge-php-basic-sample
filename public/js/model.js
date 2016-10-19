@@ -62,7 +62,7 @@ var ServerResponseData = {
         if(typeof data == 'object'){
             data = JSON.stringify(data, null , "    ");
         }
-        else{
+        else if (isJSON(data)){
             data = JSON.parse(data);
             data = JSON.stringify(data, null , "    ");
         }
@@ -79,5 +79,18 @@ var ServerResponseData = {
     refreshData : function(){
         this.data = "";
         $('#server-response-body pre').text("");
+    }
+};
+
+var isJSON = function(arg) {
+    arg = (typeof arg === "function") ? arg() : arg;
+    if (typeof arg  !== "string") {
+        return false;
+    }
+    try {
+        arg = (!JSON) ? eval("(" + arg + ")") : JSON.parse(arg);
+        return true;
+    } catch (e) {
+        return false;
     }
 };
