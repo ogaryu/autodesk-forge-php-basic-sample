@@ -30,7 +30,7 @@ var AjaxFormController = function() {
 
             for (i=0; i<matches.length; i++) {
                 var paramValue = $(matches[i].match(/\{(.+)\}/)[1]).val();
-                formActionUrl.replace(matches[i], paramValue);
+                formActionUrl = formActionUrl.replace(matches[i], paramValue);
             }
             
             console.log(formActionUrl);
