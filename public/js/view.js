@@ -39,7 +39,7 @@ function OpenViewer(derivativeUrn) {
     
     var viewer;
 
-    var viewerElement = document.getElementById('viewer');
+    var viewerElement = document.getElementById('viewer-div');
 
     viewer = new Autodesk.Viewing.Private.GuiViewer3D(viewerElement, {});
 
@@ -47,7 +47,7 @@ function OpenViewer(derivativeUrn) {
 
         viewer.initialize();
 
-        loadDocument(options.document);
+        loadDocument(documentId);
     });
     
     // Autodesk.Viewing.Initializer(options, function onInitialized(){
