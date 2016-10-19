@@ -13,7 +13,7 @@ var AjaxFormController = function() {
         var form = $(this);
         var formData = form.serialize();
         var formActionUrl = form.attr('action');
-        var formRequestAction = form.attr('data-request-type');
+        var formRequestAction = form.attr('data-request-action');
         var formMethod = form.attr('method');
 
         if(formMethod == undefined || formMethod == ''){
