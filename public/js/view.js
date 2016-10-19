@@ -30,11 +30,11 @@ function OpenViewer(derivativeUrn) {
     var documentJsonData = '';
     
     var options = {
-        'env' : 'AutodeskProduction',
-        'document' : documentId,
-        'getAccessToken': Get3LeggedToken,
-        'refreshToken': Get3LeggedToken,
-        'language': 'en'
+        env : 'AutodeskProduction',
+        document : documentId,
+        getAccessToken : Get3LeggedToken,
+        refreshToken : Get3LeggedToken,
+        language : 'en'
     };
     
     Autodesk.Viewing.Initializer(options, function onInitialized(){

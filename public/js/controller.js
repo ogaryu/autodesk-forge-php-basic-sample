@@ -90,7 +90,7 @@ var AjaxFormController = function() {
     });
 };
 
-function Get3LeggedToken () {
+function Get3LeggedToken (onGetAccessToken) {
 
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
@@ -100,8 +100,11 @@ function Get3LeggedToken () {
     var token = xmlHttp.responseText;
     
     if (token != '') console.log('3 legged token (User Authorization): ' + token);
-    
-    return token;
+
+    var accessToken = token;
+    var expireTimeSeconds = 60 * 30;
+    onGetAccessToken(accessToken, expireTimeSeconds);
+    //return token;
 }
 
 AjaxFormController();
