@@ -13,7 +13,7 @@ var ClientRequestData = {
 
         this.data = data;
         
-        $('#client-request-body').html(this.data);
+        $('#client-request-body').text(this.data);
     },
 
     getData : function() {
@@ -31,7 +31,7 @@ var ServerResponseData = {
         
         this.data = data;
 
-        $('#server-response-body').html(this.data);
+        $('#server-response-body').text(this.data);
     },
 
     getData : function() {
