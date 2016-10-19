@@ -100,11 +100,8 @@ function Get3LeggedToken (onGetAccessToken) {
     var token = xmlHttp.responseText;
     
     if (token != '') console.log('3 legged token (User Authorization): ' + token);
-
-    var accessToken = token;
-    var expireTimeSeconds = 60 * 30;
-    onGetAccessToken(accessToken, expireTimeSeconds);
-    //return token;
+    
+    return token;
 }
 
 AjaxFormController();
