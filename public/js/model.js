@@ -10,7 +10,7 @@ var ClientRequestData = {
         this.refreshData();
 
         if(typeof data == 'object'){
-            data = JSON.stringify(data, null , "\t");
+            data = JSON.stringify(data, null , "    ");
         }
 
         this.data = data;
@@ -35,7 +35,7 @@ var ServerResponseData = {
         this.refreshData();
 
         if(typeof data == 'object'){
-            data = JSON.stringify(data, null , "\t");
+            data = JSON.stringify(data, null , "    ");
         }
         
         this.data = data;
