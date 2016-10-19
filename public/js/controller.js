@@ -55,7 +55,7 @@ var AjaxFormController = function() {
                 
                 console.log(data);
 
-                if(formActionStr == 'login'){
+                if(formRequestAction == 'login'){
 
                     ServerResponseData.setData(data);
 
