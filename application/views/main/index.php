@@ -48,14 +48,14 @@
         <div class="panel panel-result">
             <div class="panel-heading">Client Request</div>
             <div class="panel-body" id="client-request-body">
-                <p></p>
+                <pre></pre>
             </div>
         </div>
         
         <div class="panel panel-result">
             <div class="panel-heading">Server Response</div>
             <div class="panel-body" id="server-response-body">
-                <p></p>
+                <pre></pre>
             </div>
         </div>
 

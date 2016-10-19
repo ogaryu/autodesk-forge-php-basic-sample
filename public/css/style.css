@@ -85,7 +85,7 @@ ul.error_list li {
     
 }
 
-.panel-body {
+.panel-body pre {
     word-wrap:break-word;
     overflow-wrap:break-word;
 }

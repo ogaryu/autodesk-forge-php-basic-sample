@@ -15,7 +15,7 @@ var ClientRequestData = {
 
         this.data = data;
         
-        $('#client-request-body').text(this.data);
+        $('#client-request-body pre').text(this.data);
     },
 
     getData : function() {
@@ -24,7 +24,7 @@ var ClientRequestData = {
     
     refreshData : function(){
         this.data = "";
-        $('#client-request-body').text("");
+        $('#client-request-body pre').text("");
     }
 };
 
@@ -40,7 +40,7 @@ var ServerResponseData = {
         
         this.data = data;
 
-        $('#server-response-body').text(this.data);
+        $('#server-response-body pre').text(this.data);
     },
 
     getData : function() {
@@ -49,6 +49,6 @@ var ServerResponseData = {
 
     refreshData : function(){
         this.data = "";
-        $('#server-response-body').text("");
+        $('#server-response-body pre').text("");
     }
 };
