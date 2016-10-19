@@ -25,10 +25,10 @@ var AjaxFormController = function() {
         }
         
         var clientRequestParam = "";
-        clientRequestParam += 'URL: ' + formActionUrl + '¥n';
-        clientRequestParam += 'Type: ' + formMethod + '¥n';
-        clientRequestParam += 'ContentType: ' + 'application/json' + '¥n';
-        clientRequestParam += 'Data: ' + formData + '¥n';
+        clientRequestParam += '<p>URL: ' + formActionUrl + '<p>';
+        clientRequestParam += '<p>Type: ' + formMethod + '<p>';
+        clientRequestParam += '<p>ContentType: ' + 'application/json' + '<p>';
+        clientRequestParam += '<p>Data: ' + JSON.stringify(formData) + '<p>';
         
         ClientRequestData.setData(clientRequestParam);
         
