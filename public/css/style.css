@@ -114,11 +114,11 @@ ul.error_list li {
 }
 
 #client-request-body {
-    height: 184px;
+    height: 124px;
 }
 
 #client-request-body pre {
-    height: 154px;
+    height: 94px;
 }
 
 #server-response-body {
