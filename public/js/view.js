@@ -22,3 +22,57 @@ function AuthenticationWindowView(url, title, w, h) {
     return newWindow;
 }
 
+function OpenViewer(derivativeUrn) {
+
+    var viewerApp;
+
+    var documentId = 'urn:<YOUR_URN_ID>';
+    
+    var options = {
+        'env' : 'AutodeskProduction',
+        'document' : 'urn:'+ derivativeUrn,
+        'getAccessToken': Get3LeggedToken,
+        'refreshToken': Get3LeggedToken,
+        'language': 'en'
+    };
+    
+    Autodesk.Viewing.Initializer(options, function onInitialized(){
+        
+        viewerApp = new Autodesk.A360ViewingApplication('viewer-div');
+        viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D);
+        viewerApp.loadDocumentWithItemAndObject(documentId);
+
+    });
+    
+    var loadDocument = function(documentId){
+        // first let's get the 3 leg token (developer & user & autodesk)
+        var oauth3legtoken = Get3LeggedToken();
+
+        Autodesk.Viewing.Document.load(
+            documentId,
+            function (doc) { // onLoadCallback
+
+                documentJsonData = doc;
+
+                geometryItems = Autodesk.Viewing.Document.getSubItemsWithProperties(doc.getRootItem(), {
+                    'type': 'geometry',
+                }, true);
+
+                if (geometryItems.length > 0) {
+                    
+                    viewer.load(doc.getViewablePath(geometryItems[0]), null, null, null, doc.acmSessionId /*session for DM*/);
+                }
+                // viewer.loadDocumentWithItemAndObject(documentId);
+            },
+            function (errorMsg) { // onErrorCallback
+                // showThumbnail(documentId.substr(4, documentId.length - 1));
+                console.log(errorMsg);
+            }
+            , {
+                'oauth2AccessToken': oauth3legtoken,
+                'x-ads-acm-namespace': 'WIPDM',
+                'x-ads-acm-check-groups': 'true'
+            }
+        )
+    }
+};

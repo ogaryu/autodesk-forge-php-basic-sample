@@ -36,7 +36,7 @@
                 <div class="btn-toolbar" role="toolbar">
                     <div class="btn-group">
                         <form action="<?php echo $base_url; ?>/hubs" method="GET" class="ajaxform" data-request-action="hubs">
-                            <button type="submit" class="btn btn-default">GET HUB</button>
+                            <button type="submit" class="btn btn-default dm-btn">GET HUB</button>
                         </form>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         <input type="text" id="hub-id" class="form-control" placeholder="Hub Id" aria-describedby="addon-hub-id">
                         <span class="input-group-btn">
                             <form action="<?php echo $base_url; ?>/projects/{#hub-id}" method="GET" class="ajaxform" data-request-action="projects">
-                                <button type="submit" class="btn btn-default">GET PROJECT</button>
+                                <button type="submit" class="btn btn-default dm-btn">GET PROJECT</button>
                             </form>
                         </span>
                     </div>
@@ -63,7 +63,7 @@
                         <input type="text" id="folder-id" class="form-control" placeholder="Folder Id" aria-describedby="addon-folder-id">
                         <span class="input-group-btn">
                             <form action="<?php echo $base_url; ?>/items/{#project-id}/folders/{#folder-id}" method="GET" class="ajaxform" data-request-action="items">
-                                <button type="submit" class="btn btn-default">GET ITEMS</button>
+                                <button type="submit" class="btn btn-default dm-btn">GET ITEMS</button>
                             </form>
                         </span>
                     </div>
@@ -72,9 +72,20 @@
         </div>
 
         <div class="panel panel-primary">
-            <div class="panel-heading">Model Derivative API</div>
+            <div class="panel-heading">Viewer</div>
             <div class="panel-body">
-                Panel content
+                <p>Open Viewer</p>
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="addon-derivative-id">Derivative Id</span>
+                        <input type="text" id="derivative-id" class="form-control" placeholder="Derivative Id" aria-describedby="addon-derivative-id">
+                        <span class="input-group-btn">
+                            <div>
+                                <button type="button" id="viewer-btn" class="btn btn-default dm-btn">OPEN VIEWER</button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -97,6 +108,7 @@
         <div class="panel panel-result">
             <div class="panel-heading">Content</div>
             <div class="panel-body">
+                <div id="viewer-div"></div>
             </div>
         </div>
     </div>

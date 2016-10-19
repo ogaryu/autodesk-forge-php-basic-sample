@@ -38,16 +38,8 @@ class BasicApplication extends Application
         => array('controller' => 'main', 'action' => 'getProjects'),
         '/items/:project_id/folders/:folder_id'
         => array('controller' => 'main', 'action' => 'getItems'),
-        '/user/:user_name'
-        => array('controller' => 'status', 'action' => 'user'),
-        '/user/:user_name/status/:id'
-        => array('controller' => 'status', 'action' => 'show'),
-        '/account'
-        => array('controller' => 'account', 'action' => 'index'),
-        '/account/:action'
-        => array('controller' => 'account'),
-        '/follow'
-        => array('controller' => 'account', 'action' => 'follow')
+        '/token'
+        => array('controller' => 'main', 'action' => 'getToken')
         );
 
     }

@@ -231,7 +231,11 @@ class MainController extends Controller
         }
 
         return $this->json_response(200, $content);
-        
+    }
+    
+    public function getTokenAction() {
+
+        return $this->session->get('token');
     }
     
 }

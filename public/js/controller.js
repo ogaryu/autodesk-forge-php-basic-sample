@@ -42,8 +42,6 @@ var AjaxFormController = function() {
 
         ClientRequestData.setData(clientRequestData);
         
-        console.log(formData);
-        
         $.ajax({
             type: formMethod,
             url : formActionUrl,
@@ -52,8 +50,6 @@ var AjaxFormController = function() {
             contentType: 'application/json',
             dataType: 'json',
             success : function(data){
-                
-                console.log(data);
 
                 if(formRequestAction == 'login'){
 
@@ -92,4 +88,30 @@ var AjaxFormController = function() {
     });
 };
 
+function Get3LeggedToken () {
+
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", '/token', false);
+    xmlHttp.send(null);
+
+    var token = xmlHttp.responseText;
+    
+    if (token != '') console.log('3 legged token (User Authorization): ' + token);
+    
+    return token;
+}
+
+function ViewerController(e){
+    
+    $('#viewer-btn').on('click', function(){
+        
+        var derivativeId = $('#derivative-id').val();
+
+        OpenViewer(derivativeId);
+        
+    });
+}
+
 AjaxFormController();
+ViewerController();
