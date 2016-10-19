@@ -36,10 +36,15 @@ var AjaxFormController = function() {
                 console.log(data);
 
                 if(formActionStr == 'login'){
+
                     var authWindow = AuthenticationWindowView(data['url'], "Autodesk Login", 800, 400);
                     authWindow.onload = function() {};
+                    authWindow.onbeforeunload = function(){
 
-                    ServerResponseData.setData(data['url']);
+                        ServerResponseData.setData(data['url']);
+                        
+                        return ;
+                    }
                 }
                 else if(formActionStr == 'logout'){
                     document.location.reload(true);
