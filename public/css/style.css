@@ -113,10 +113,10 @@ ul.error_list li {
     width: 120px;
 }
 
-#server-response-panel {
-    height: 293px;
-}
-
 #server-response-body {
     height: 323px;
+}
+
+#server-response-body pre {
+    height: 293px;
 }

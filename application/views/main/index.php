@@ -96,7 +96,7 @@
             </div>
         </div>
 
-        <div class="panel panel-result" id="server-response-panel">
+        <div class="panel panel-result">
             <div class="panel-heading">Server Response</div>
             <div class="panel-body" id="server-response-body">
                 <pre></pre>
