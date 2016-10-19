@@ -47,6 +47,8 @@ var AjaxFormController = function() {
 
         ClientRequestData.setData(clientRequestData);
         
+        console.log(formData);
+        
         $.ajax({
             type: formMethod,
             url : formActionUrl,

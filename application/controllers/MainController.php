@@ -161,7 +161,40 @@ class MainController extends Controller
             } catch (RequestException $e) {
                 return $this->json_response(200, json_encode(['message'=> $e->getMessage()]));
             }
-        }else {
+        }
+        else {
+            return $this->json_response(200, json_encode(['message'=> 'Field token is expired. Please try to login.']));
+        }
+
+        return $this->json_response(200, $content);
+    }
+    
+    public function getProjectsAction($params){
+
+        $content = "";
+
+        if($this->session->get('token') != null) {
+
+            try {
+                
+                $client = new \GuzzleHttp\Client();
+
+                $response = $client->request('GET', 'https://developer.api.autodesk.com/project/v1/hubs/' . $params['hub_id'] . '/projects', [
+                    'headers' => [
+                        'Authorization' => 'Bearer ' . $this->session->get('token')
+                    ],
+                    'on_stats' => function (TransferStats $stats) use (&$url) {
+                        $url = $stats->getEffectiveUri();
+                    }
+                ]);
+
+                $content = $response->getBody()->getContents();
+                
+            } catch (RequestException $e) {
+                return $this->json_response(200, json_encode(['message'=> $e->getMessage()]));
+            }
+        }
+        else {
             return $this->json_response(200, json_encode(['message'=> 'Field token is expired. Please try to login.']));
         }
 
