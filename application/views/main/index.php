@@ -15,7 +15,7 @@
                         </form>
                     </div>
                     <div class="btn-group">
-                        <form action="<?php echo $base_url; ?>/logout" method="GET" class="ajaxform">
+                        <form action="<?php echo $base_url; ?>/logout" method="POST" class="ajaxform">
                             <button type="submit" class="btn btn-default">LOGOUT</button>
                         </form>
                     </div>
