@@ -20,22 +20,17 @@ var AjaxFormController = function() {
             formMethod = 'GET';
         }
         
-        // if(formData == undefined || formData == ''){
-        //     formData = {action: formActionStr};
-        // }
+        if(formData == undefined || formData == ""){
+            formData = {};
+        }
         
         if(formActionUrl.indexOf('{') != -1){
-            
             var matches = formActionUrl.match(/{(.*?)}/g);
 
             for (i=0; i<matches.length; i++) {
                 var paramValue = $(matches[i].match(/\{(.+)\}/)[1]).val();
                 formActionUrl = formActionUrl.replace(matches[i], paramValue);
             }
-            
-            console.log(formActionUrl);
-            
-            //var actionUrlParam = formActionUrl.substring(formActionUrl.indexOf('#'), formActionUrl.indexOf('}'));
         }
         
         var clientRequestData = {
