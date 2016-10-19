@@ -53,9 +53,9 @@ var AjaxFormController = function() {
 
                 if(formRequestAction == 'login'){
 
-                    ServerResponseData.setData(data['content']);
+                    ServerResponseData.setData(data['url']);
 
-                    var authWindow = AuthenticationWindowView(data['content']['url'], "Autodesk Login", 800, 400);
+                    var authWindow = AuthenticationWindowView(data['url'], "Autodesk Login", 800, 400);
                     authWindow.onload = function() {};
                     authWindow.onbeforeunload = function(){
 
