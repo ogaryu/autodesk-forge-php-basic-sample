@@ -29,7 +29,7 @@ var AjaxFormController = function() {
             var matches = formActionUrl.match(/{(.*?)}/g);
 
             for (i=0; i<matches.length; i++) {
-                console.log(matches[i]);
+                console.log(matches[i].match(/\{(.+)\}/)[1]);
             }
             
             //var actionUrlParam = formActionUrl.substring(formActionUrl.indexOf('#'), formActionUrl.indexOf('}'));
