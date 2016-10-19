@@ -8,7 +8,7 @@ var ClientRequestData = {
     setData : function(data) {
 
         if(typeof data == 'object'){
-            this.data = JSON.stringify(data);
+            data = JSON.stringify(data);
         }
 
         this.data = data;
@@ -26,7 +26,7 @@ var ServerResponseData = {
     setData : function(data) {
 
         if(typeof data == 'object'){
-            this.data = JSON.stringify(data);
+            data = JSON.stringify(data);
         }
         
         this.data = data;
