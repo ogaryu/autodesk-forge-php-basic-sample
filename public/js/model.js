@@ -28,6 +28,31 @@ var ClientRequestData = {
     }
 };
 
+var ServerRequestData = {
+
+    setData : function(data) {
+
+        this.refreshData();
+
+        if(typeof data == 'object'){
+            data = JSON.stringify(data, null , "    ");
+        }
+
+        this.data = data;
+
+        $('#server-request-body pre').text(this.data);
+    },
+
+    getData : function() {
+        return this.data;
+    },
+
+    refreshData : function(){
+        this.data = "";
+        $('#server-request-body pre').text("");
+    }
+};
+
 var ServerResponseData = {
     
     setData : function(data) {

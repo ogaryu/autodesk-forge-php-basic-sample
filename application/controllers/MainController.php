@@ -110,15 +110,14 @@ class MainController extends Controller
     public function getUserProfileAction(){
 
         $content = "";
+        $request = 'https://developer.api.autodesk.com/userprofile/v1/users/@me';
 
         if($this->session->get('token') != null){
             try {
                 
                 $client = new \GuzzleHttp\Client();
-
-                $this->view->endpoint = 'https://developer.api.autodesk.com/userprofile/v1/users/@me';
-
-                $response = $client->request('GET', 'https://developer.api.autodesk.com/userprofile/v1/users/@me', [
+                
+                $response = $client->request('GET', $request, [
                     'headers' => [
                         'Authorization'      => 'Bearer ' . $this->session->get('token')
                     ],
@@ -136,20 +135,26 @@ class MainController extends Controller
         else {
             return $this->json_response(200, json_encode(['message'=> 'Field token is expired. Please try to login.']));
         }
+        
+        $result = json_encode([
+            'request'=>$request,
+            'content'=>$content
+        ]);
 
-        return $this->json_response(200, $content);
+        return $this->json_response(200, $result);
     }
 
     public function getHubsAction(){
 
         $content = "";
+        $request = 'https://developer.api.autodesk.com/project/v1/hubs';
 
         if($this->session->get('token') != null) {
 
             try {
                 $client = new \GuzzleHttp\Client();
 
-                $response = $client->request('GET', 'https://developer.api.autodesk.com/project/v1/hubs', [
+                $response = $client->request('GET', $request, [
                     'headers' => [
                         'Authorization' => 'Bearer ' . $this->session->get('token')
                     ],
@@ -168,12 +173,18 @@ class MainController extends Controller
             return $this->json_response(200, json_encode(['message'=> 'Field token is expired. Please try to login.']));
         }
 
-        return $this->json_response(200, $content);
+        $result = json_encode([
+            'request'=>$request,
+            'content'=>$content
+        ]);
+
+        return $this->json_response(200, $result);
     }
     
     public function getProjectsAction($params){
 
         $content = "";
+        $request = 'https://developer.api.autodesk.com/project/v1/hubs/' . $params['hub_id'] . '/projects';
 
         if($this->session->get('token') != null) {
 
@@ -181,7 +192,7 @@ class MainController extends Controller
                 
                 $client = new \GuzzleHttp\Client();
 
-                $response = $client->request('GET', 'https://developer.api.autodesk.com/project/v1/hubs/' . $params['hub_id'] . '/projects', [
+                $response = $client->request('GET', $request, [
                     'headers' => [
                         'Authorization' => 'Bearer ' . $this->session->get('token')
                     ],
@@ -200,12 +211,18 @@ class MainController extends Controller
             return $this->json_response(200, json_encode(['message'=> 'Field token is expired. Please try to login.']));
         }
 
-        return $this->json_response(200, $content);
+        $result = json_encode([
+            'request'=>$request,
+            'content'=>$content
+        ]);
+
+        return $this->json_response(200, $result);
     }
 
     public function getItemsAction($params){
 
         $content = "";
+        $request = 'https://developer.api.autodesk.com/data/v1/projects/'. $params['project_id'] .'/folders/'. $params['folder_id'] .'/contents';
 
         if($this->session->get('token') != null) {
 
@@ -213,7 +230,7 @@ class MainController extends Controller
 
                 $client = new \GuzzleHttp\Client();
 
-                $response = $client->request('GET', 'https://developer.api.autodesk.com/data/v1/projects/'. $params['project_id'] .'/folders/'. $params['folder_id'] .'/contents', [
+                $response = $client->request('GET', $request, [
                     'headers' => [
                         'Authorization' => 'Bearer ' . $this->session->get('token')
                     ],
@@ -232,7 +249,12 @@ class MainController extends Controller
             return $this->json_response(200, json_encode(['message'=> 'Field token is expired. Please try to login.']));
         }
 
-        return $this->json_response(200, $content);
+        $result = json_encode([
+            'request'=>$request,
+            'content'=>$content
+        ]);
+
+        return $this->json_response(200, $result);
     }
     
     public function getTokenAction() {

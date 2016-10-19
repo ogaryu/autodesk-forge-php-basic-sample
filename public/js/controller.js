@@ -37,7 +37,7 @@ var AjaxFormController = function() {
             URL: formActionUrl,
             Type: formMethod,
             ContentType: 'application/json',
-            Data: form.serialize()
+            Data: formData
         };
 
         ClientRequestData.setData(clientRequestData);
@@ -53,9 +53,9 @@ var AjaxFormController = function() {
 
                 if(formRequestAction == 'login'){
 
-                    ServerResponseData.setData(data);
+                    ServerResponseData.setData(data['content']);
 
-                    var authWindow = AuthenticationWindowView(data['url'], "Autodesk Login", 800, 400);
+                    var authWindow = AuthenticationWindowView(data['content']['url'], "Autodesk Login", 800, 400);
                     authWindow.onload = function() {};
                     authWindow.onbeforeunload = function(){
 
@@ -65,23 +65,23 @@ var AjaxFormController = function() {
                 else if(formRequestAction == 'logout'){
                     
                     //document.location.reload(true);
-                    ServerResponseData.setData(data);
+                    ServerResponseData.setData(data['content']);
                 }
                 else if(formRequestAction == 'userprofile'){
-                    
-                    ServerResponseData.setData(data);
+                    ServerRequestData.setData(data['request']);
+                    ServerResponseData.setData(data['content']);
                 }
                 else if(formRequestAction == 'hubs'){
-
-                    ServerResponseData.setData(data);
+                    ServerRequestData.setData(data['request']);
+                    ServerResponseData.setData(data['content']);
                 }
                 else if(formRequestAction == 'projects'){
-                    
-                    ServerResponseData.setData(data);
+                    ServerRequestData.setData(data['request']);
+                    ServerResponseData.setData(data['content']);
                 }
                 else if(formRequestAction == 'items'){
-
-                    ServerResponseData.setData(data);
+                    ServerRequestData.setData(data['request']);
+                    ServerResponseData.setData(data['content']);
 
                     SetUpViewerOpenEvent();
                 }
