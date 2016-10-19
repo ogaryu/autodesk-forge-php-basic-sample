@@ -1,6 +1,4 @@
-<?php $this->setLayoutVar('title', 'ホーム') ?>
-
-<h2>ホーム</h2>
+<?php $this->setLayoutVar('title', 'Home') ?>
 
 <div class="row">
     <div class="col-md-6">
@@ -106,7 +104,7 @@
         </div>
 
         <div class="panel panel-result">
-            <div class="panel-heading">Content</div>
+            <div class="panel-heading">Viewer Content</div>
             <div class="panel-body">
                 <div id="viewer-div" style="position: relative; margin: 0; width: 100%; height: 400px; border: 1px solid #ddd;"></div>
             </div>

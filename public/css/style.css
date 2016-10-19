@@ -43,7 +43,7 @@ a {
 }
 
 #main {
-    margin: 0 30px;
+    margin: 20px 30px;
 }
 
 .status {
@@ -91,7 +91,7 @@ ul.error_list li {
 .panel-body pre {
     word-wrap:break-word;
     overflow-wrap:break-word;
-    max-height: 250px;
+    max-height: 282px;
 }
 
 .btn-toolbar {
@@ -115,5 +115,5 @@ ul.error_list li {
 }
 
 #server-response-body {
-    max-height: 280px;
+    max-height: 322px;
 }
