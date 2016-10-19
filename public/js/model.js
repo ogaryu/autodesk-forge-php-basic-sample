@@ -62,6 +62,10 @@ var ServerResponseData = {
         if(typeof data == 'object'){
             data = JSON.stringify(data, null , "    ");
         }
+        else{
+            data = JSON.parse(data);
+            data = JSON.stringify(data, null , "    ");
+        }
         
         this.data = data;
 

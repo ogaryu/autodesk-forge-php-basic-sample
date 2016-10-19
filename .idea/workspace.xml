@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="51" column="131" selection-start-line="51" selection-start-column="131" selection-end-line="51" selection-end-column="131" />
               <folding>
                 <element signature="e#7#100#0#PHP" expanded="true" />
                 <element signature="e#102#148#0#PHP" expanded="true" />
@@ -38,18 +38,18 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+            <state relative-caret-position="315">
+              <caret line="67" column="60" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="model.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="30" column="21" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="21" />
+            <state relative-caret-position="229">
+              <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -159,9 +159,9 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/application/core/Controller.php" />
         <option value="$PROJECT_DIR$/application/controllers/MainController.php" />
-        <option value="$PROJECT_DIR$/public/js/model.js" />
         <option value="$PROJECT_DIR$/application/views/main/index.php" />
         <option value="$PROJECT_DIR$/public/js/controller.js" />
+        <option value="$PROJECT_DIR$/public/js/model.js" />
       </list>
     </option>
   </component>
@@ -176,7 +176,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="XAMPP PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
     <option name="y" value="22" />
     <option name="width" value="1439" />
     <option name="height" value="782" />
@@ -525,7 +524,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475201646325</updated>
       <workItem from="1475201648317" duration="15457000" />
-      <workItem from="1476706472010" duration="59401000" />
+      <workItem from="1476706472010" duration="59603000" />
     </task>
     <servers />
   </component>
@@ -538,10 +537,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74858000" />
+    <option name="totallyTimeSpent" value="75060000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="22" width="1439" height="782" extended-state="0" />
+    <frame x="0" y="22" width="1439" height="782" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -761,14 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -841,6 +832,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="51" column="131" selection-start-line="51" selection-start-column="131" selection-end-line="51" selection-end-column="131" />
+          <folding>
+            <element signature="e#7#100#0#PHP" expanded="true" />
+            <element signature="e#102#148#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="67" column="60" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -851,13 +861,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/model.js">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="177">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -871,21 +879,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controller.js">
+    <entry file="file://$PROJECT_DIR$/public/js/model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="229">
+          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
           <folding>
-            <element signature="e#7#100#0#PHP" expanded="true" />
-            <element signature="e#102#148#0#PHP" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
