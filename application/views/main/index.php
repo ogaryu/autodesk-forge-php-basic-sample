@@ -108,7 +108,7 @@
         <div class="panel panel-result">
             <div class="panel-heading">Content</div>
             <div class="panel-body">
-                <div id="viewer-div" style="position: relative; margin: 0; width: 100%; height: 100%; border: 1px solid #ddd;"></div>
+                <div id="viewer-div" style="position: relative; margin: 0; width: 100%; height: 400px; border: 1px solid #ddd;"></div>
             </div>
         </div>
     </div>

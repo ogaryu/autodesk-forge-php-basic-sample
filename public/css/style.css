@@ -82,7 +82,6 @@ ul.error_list li {
 }
 
 .panel-body {
-    max-height: 280px;
 }
 
 .form-horizontal {
@@ -115,6 +114,6 @@ ul.error_list li {
     width: 120px;
 }
 
-#viewer-div {
-    
+#server-response-body {
+    max-height: 280px;
 }
