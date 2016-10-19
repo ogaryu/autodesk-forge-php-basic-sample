@@ -24,6 +24,17 @@ var AjaxFormController = function() {
             formData = {action: formActionStr};
         }
         
+        if(formActionUrl.indexOf('{') != -1){
+            
+            var matches = formActionUrl.match(/{(.*?)}/g);
+
+            for (i=0; i<matches.length; i++) {
+                console.log(matches[i]);
+            }
+            
+            //var actionUrlParam = formActionUrl.substring(formActionUrl.indexOf('#'), formActionUrl.indexOf('}'));
+        }
+        
         var clientRequestData = {
             URL: formActionUrl,
             Type: formMethod,
@@ -64,20 +75,13 @@ var AjaxFormController = function() {
                     
                     ServerResponseData.setData(data);
                 }
-                else if(formActionStr == 'hub'){
+                else if(formActionStr == 'hubs'){
 
                     ServerResponseData.setData(data);
-                    // var self = $("#hub-body").parent().find('.panel-heading');
-                    // $("#hub-body").html(data);
-                    // $('.panel .panel-heading').not(self).next().slideUp();
-                    // $("#hub-body").slideDown();
-                    // setAjaxForm();
                 }
                 else if(formActionStr == 'projects'){
-                    $("#projects-body").html(data);
-                    $('.panel .panel-heading').next().slideUp();
-                    $("#projects-body").slideDown();
-                    setAjaxForm();
+                    
+                    ServerResponseData.setData(data);
                 }
                 else if(formActionStr == 'items'){
                     $("#items-body").html(data);

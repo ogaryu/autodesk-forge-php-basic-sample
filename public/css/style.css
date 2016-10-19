@@ -81,6 +81,10 @@ ul.error_list li {
     font-size: 18px;
 }
 
+.panel-body {
+    max-height: 280px;
+}
+
 .form-horizontal {
     
 }
@@ -88,4 +92,13 @@ ul.error_list li {
 .panel-body pre {
     word-wrap:break-word;
     overflow-wrap:break-word;
+    max-height: 250px;
+}
+
+.btn-toolbar {
+    padding: 5px 0px;
+}
+
+.btn-toolbar .input-group .input-group-btn .btn {
+    margin-left: 6px;
 }

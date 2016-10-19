@@ -32,8 +32,10 @@ class BasicApplication extends Application
         => array('controller' => 'main', 'action' => 'getAccessToken'),
         '/userprofile'
         => array('controller' => 'main', 'action' => 'getUserProfile'),
-        '/hub'
-        => array('controller' => 'main', 'action' => 'getHub'),
+        '/hubs'
+        => array('controller' => 'main', 'action' => 'getHubs'),
+        '/projects/:hub_id'
+        => array('controller' => 'status', 'action' => 'getProjects'),
         '/user/:user_name'
         => array('controller' => 'status', 'action' => 'user'),
         '/user/:user_name/status/:id'

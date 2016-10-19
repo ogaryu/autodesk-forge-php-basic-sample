@@ -138,7 +138,7 @@ class MainController extends Controller
         return $this->json_response(200, $content);
     }
 
-    public function getHubAction(){
+    public function getHubsAction(){
 
         $content = "";
 

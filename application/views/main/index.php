@@ -25,7 +25,7 @@
                         </form>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -35,9 +35,20 @@
                 <p>Request A360 Data Information</p>
                 <div class="btn-toolbar" role="toolbar">
                     <div class="btn-group">
-                        <form action="<?php echo $base_url; ?>/hub" method="GET" class="ajaxform">
+                        <form action="<?php echo $base_url; ?>/hubs" method="GET" class="ajaxform">
                             <button type="submit" class="btn btn-default">GET HUB</button>
                         </form>
+                    </div>
+                </div>
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="addon-hub-id">Hub Id</span>
+                        <input type="text" id="hub-id" class="form-control" placeholder="Hub Id" aria-describedby="addon-hub-id">
+                        <span class="input-group-btn">
+                            <form action="<?php echo $base_url; ?>/projects/{#hub-id}" method="GET" class="ajaxform">
+                                <button type="submit" class="btn btn-default">GET PROJECT</button>
+                            </form>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -58,7 +69,7 @@
                 <pre></pre>
             </div>
         </div>
-        
+
         <div class="panel panel-result">
             <div class="panel-heading">Server Response</div>
             <div class="panel-body" id="server-response-body">
