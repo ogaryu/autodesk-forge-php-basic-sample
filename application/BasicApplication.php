@@ -36,6 +36,8 @@ class BasicApplication extends Application
         => array('controller' => 'main', 'action' => 'getHubs'),
         '/projects/:hub_id'
         => array('controller' => 'main', 'action' => 'getProjects'),
+        '/items/:project_id/folders/:folder_id'
+        => array('controller' => 'main', 'action' => 'getItems'),
         '/user/:user_name'
         => array('controller' => 'status', 'action' => 'user'),
         '/user/:user_name/status/:id'

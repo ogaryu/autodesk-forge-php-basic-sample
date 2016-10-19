@@ -103,7 +103,7 @@ class MainController extends Controller
             // Failed to get the access token or user details.
             exit($e->getMessage());
         }
-//        return '<script>window.opener.location.reload(false);window.close();</script>';
+        
         return '<script>window.close();</script>';
     }
     
@@ -199,6 +199,39 @@ class MainController extends Controller
         }
 
         return $this->json_response(200, $content);
+    }
+
+    public function getItemsAction($params){
+
+        $content = "";
+
+        if($this->session->get('token') != null) {
+
+            try {
+
+                $client = new \GuzzleHttp\Client();
+
+                $response = $client->request('GET', 'https://developer.api.autodesk.com/data/v1/projects/'. $params['project_id'] .'/folders/'. $params['folder_id'] .'/contents', [
+                    'headers' => [
+                        'Authorization' => 'Bearer ' . $this->session->get('token')
+                    ],
+                    'on_stats' => function (TransferStats $stats) use (&$url) {
+                        $url = $stats->getEffectiveUri();
+                    }
+                ]);
+
+                $content = $response->getBody()->getContents();
+
+            } catch (RequestException $e) {
+                return $this->json_response(200, json_encode(['message'=> $e->getMessage()]));
+            }
+        }
+        else {
+            return $this->json_response(200, json_encode(['message'=> 'Field token is expired. Please try to login.']));
+        }
+
+        return $this->json_response(200, $content);
+        
     }
     
 }

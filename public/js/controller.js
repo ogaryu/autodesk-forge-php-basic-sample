@@ -84,17 +84,8 @@ var AjaxFormController = function() {
                     ServerResponseData.setData(data);
                 }
                 else if(formRequestAction == 'items'){
-                    $("#items-body").html(data);
-                    $('.panel .panel-heading').next().slideUp();
-                    $("#items-body").slideDown();
-                    setAjaxForm();
-                    setViewer();
-                }
-                else if(formRequestAction == 'issues'){
-                    $("#issues-body").html(data);
-                    $('.panel .panel-heading').next().slideUp();
-                    $("#issues-body").slideDown();
-                    setAjaxForm();
+
+                    ServerResponseData.setData(data);
                 }
             }
         });

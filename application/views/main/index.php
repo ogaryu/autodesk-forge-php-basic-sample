@@ -51,6 +51,23 @@
                         </span>
                     </div>
                 </div>
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="addon-project-id">Project Id</span>
+                        <input type="text" id="project-id" class="form-control" placeholder="Project Id" aria-describedby="addon-project-id">
+                    </div>
+                </div>
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="addon-folder-id">Folder Id</span>
+                        <input type="text" id="folder-id" class="form-control" placeholder="Folder Id" aria-describedby="addon-folder-id">
+                        <span class="input-group-btn">
+                            <form action="<?php echo $base_url; ?>/items/{#project-id}/folders/{#folder-id}" method="GET" class="ajaxform" data-request-action="items">
+                                <button type="submit" class="btn btn-default">GET ITEMS</button>
+                            </form>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
 
