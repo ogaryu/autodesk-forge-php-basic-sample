@@ -35,9 +35,7 @@ var AjaxFormController = function() {
         
         var clientRequestData = {
             URL: formActionUrl,
-            Type: formMethod,
-            ContentType: 'application/json',
-            Data: formData
+            Type: formMethod
         };
 
         ClientRequestData.setData(clientRequestData);
@@ -53,7 +51,7 @@ var AjaxFormController = function() {
 
                 if(formRequestAction == 'login'){
 
-                    ServerResponseData.setData(data['url']);
+                    ServerResponseData.setData(data);
 
                     var authWindow = AuthenticationWindowView(data['url'], "Autodesk Login", 800, 400);
                     authWindow.onload = function() {};
