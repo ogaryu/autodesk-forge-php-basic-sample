@@ -17,8 +17,8 @@ The configuration file is in the application/config/config.php.
 ## Install library through Composer
 The application uses OAuth 2.0 Client and Guzzle.
 If you install OAuth 2.0 Client through Composer, dependent package will be installed including Guzzle.
-https://github.com/thephpleague/oauth2-client
 
+https://github.com/thephpleague/oauth2-client
 https://github.com/guzzle/guzzle
 
 ## Deploy the app to a server
