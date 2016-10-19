@@ -37,14 +37,27 @@ function OpenViewer(derivativeUrn) {
         language : 'en'
     };
     
-    Autodesk.Viewing.Initializer(options, function onInitialized(){
-        
-        viewerApp = new Autodesk.A360ViewingApplication('viewer-div');
-        viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D);
-        //viewerApp.loadDocumentWithItemAndObject(documentId);
-        loadDocument(options.document);
+    var viewer;
 
+    var viewerElement = document.getElementById('viewer');
+
+    viewer = new Autodesk.Viewing.Private.GuiViewer3D(viewerElement, {});
+
+    Autodesk.Viewing.Initializer(options, function () {
+
+        viewer.initialize();
+
+        loadDocument(options.document);
     });
+    
+    // Autodesk.Viewing.Initializer(options, function onInitialized(){
+    //    
+    //     viewerApp = new Autodesk.A360ViewingApplication('viewer-div');
+    //     viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D);
+    //     //viewerApp.loadDocumentWithItemAndObject(documentId);
+    //     loadDocument(options.document);
+    //
+    // });
     
     var loadDocument = function(documentId){
         // first let's get the 3 leg token (developer & user & autodesk)

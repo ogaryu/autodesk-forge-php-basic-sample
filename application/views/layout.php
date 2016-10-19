@@ -23,11 +23,11 @@
     <script src="/js/controller.js"></script>
     
     <!-- Viewer -->
-    <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css?v=2.10.*" type="text/css">
-    <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/A360.css?v=2.10.*" type="text/css">
-    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/three.min.js?v=2.10.*"></script>
-    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js?v=2.10.*"></script>
-    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/Autodesk360App.js?v=2.10.*"></script>
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css?v=2.9.*" type="text/css">
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/A360.css?v=2.9.*" type="text/css">
+    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/three.min.js?v=2.9.*"></script>
+    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js?v=2.9.*"></script>
+    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/Autodesk360App.js?v=2.9.*"></script>
     
 </head>
 <body>
