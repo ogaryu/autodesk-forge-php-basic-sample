@@ -70,8 +70,8 @@ class MainController extends Controller
             $this->token = "";
             $this->refresh_token = "";
         }
-        
-        return $this->redirect('/');
+
+        return $this->json_response(200, json_encode(['message'=> 'logout successful']));
     }
 
     public function getAccessTokenAction(){
@@ -125,7 +125,7 @@ class MainController extends Controller
                     }
                 ]);
             } catch (RequestException $e) {
-                return redirect('/')->with('message', $e->getMessage());
+                return $this->json_response(200, json_encode(['message'=> $e->getMessage()]));
             }
 
             $content = $response->getBody()->getContents();
