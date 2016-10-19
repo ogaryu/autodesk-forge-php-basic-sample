@@ -7,8 +7,10 @@ var ClientRequestData = {
 
     setData : function(data) {
 
+        this.refreshData();
+
         if(typeof data == 'object'){
-            data = JSON.stringify(data);
+            data = JSON.stringify(data, null , "\t");
         }
 
         this.data = data;
@@ -18,15 +20,22 @@ var ClientRequestData = {
 
     getData : function() {
         return this.data;
+    },
+    
+    refreshData : function(){
+        this.data = "";
+        $('#client-request-body').text("");
     }
 };
 
 var ServerResponseData = {
     
     setData : function(data) {
+        
+        this.refreshData();
 
         if(typeof data == 'object'){
-            data = JSON.stringify(data);
+            data = JSON.stringify(data, null , "\t");
         }
         
         this.data = data;
@@ -36,5 +45,10 @@ var ServerResponseData = {
 
     getData : function() {
         return this.data;
+    },
+
+    refreshData : function(){
+        this.data = "";
+        $('#server-response-body').text("");
     }
 };
