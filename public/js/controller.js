@@ -25,10 +25,10 @@ var AjaxFormController = function() {
         }
         
         var clientRequestParam = "";
-        clientRequestParam += '<p>URL: ' + formActionUrl + '<p>';
-        clientRequestParam += '<p>Type: ' + formMethod + '<p>';
-        clientRequestParam += '<p>ContentType: ' + 'application/json' + '<p>';
-        clientRequestParam += '<p>Data: ' + JSON.stringify(formData) + '<p>';
+        clientRequestParam += '<p>URL: ' + formActionUrl + '</p>';
+        clientRequestParam += '<p>Type: ' + formMethod + '</p>';
+        clientRequestParam += '<p>ContentType: ' + 'application/json' + '</p>';
+        clientRequestParam += '<p>Data: ' + JSON.stringify(formData) + '</p>';
         
         ClientRequestData.setData(clientRequestParam);
         
@@ -45,7 +45,7 @@ var AjaxFormController = function() {
 
                 if(formActionStr == 'login'){
 
-                    ServerResponseData.setData(data['url']);
+                    ServerResponseData.setData('<p>' + data['url'] + '</p>');
 
                     var authWindow = AuthenticationWindowView(data['url'], "Autodesk Login", 800, 400);
                     authWindow.onload = function() {};
@@ -57,7 +57,7 @@ var AjaxFormController = function() {
                 else if(formActionStr == 'logout'){
                     document.location.reload(true);
 
-                    ServerResponseData.setData(data);
+                    ServerResponseData.setData('<p>' + data + '</p>');
                 }
                 else if(formActionStr == 'hub'){
                     var self = $("#hub-body").parent().find('.panel-heading');
