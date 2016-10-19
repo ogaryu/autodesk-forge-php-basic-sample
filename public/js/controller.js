@@ -82,6 +82,8 @@ var AjaxFormController = function() {
                 else if(formRequestAction == 'items'){
 
                     ServerResponseData.setData(data);
+
+                    SetUpViewerOpenEvent();
                 }
             }
         });
@@ -102,16 +104,4 @@ function Get3LeggedToken () {
     return token;
 }
 
-function ViewerController(e){
-    
-    $('#viewer-btn').on('click', function(){
-        
-        var derivativeId = $('#derivative-id').val();
-
-        OpenViewer(derivativeId);
-        
-    });
-}
-
 AjaxFormController();
-ViewerController();

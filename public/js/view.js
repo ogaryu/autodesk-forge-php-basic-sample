@@ -75,4 +75,15 @@ function OpenViewer(derivativeUrn) {
             }
         )
     }
-};
+}
+
+function SetUpViewerOpenEvent() {
+    
+    $('#viewer-btn').on('click', function(){
+
+        var derivativeId = $('#derivative-id').val();
+
+        OpenViewer(derivativeId);
+    });
+}
+
