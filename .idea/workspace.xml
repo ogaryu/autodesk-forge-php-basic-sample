@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="view.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="-324">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc;n#AuthenticationWindowView#0" expanded="false" />
               </folding>
@@ -111,12 +111,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="110" column="75" selection-start-line="110" selection-start-column="75" selection-end-line="110" selection-end-column="75" />
-              <folding />
+            <state relative-caret-position="120">
+              <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,9 +159,9 @@
         <option value="$PROJECT_DIR$/application/controllers/MainController.php" />
         <option value="$PROJECT_DIR$/public/js/controller.js" />
         <option value="$PROJECT_DIR$/application/views/layout.php" />
-        <option value="$PROJECT_DIR$/public/js/view.js" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/application/views/main/index.php" />
+        <option value="$PROJECT_DIR$/public/js/view.js" />
       </list>
     </option>
   </component>
@@ -523,7 +525,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475201646325</updated>
       <workItem from="1475201648317" duration="15457000" />
-      <workItem from="1476706472010" duration="55670000" />
+      <workItem from="1476706472010" duration="55867000" />
     </task>
     <servers />
   </component>
@@ -536,7 +538,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71127000" />
+    <option name="totallyTimeSpent" value="71324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="22" width="1439" height="782" extended-state="0" />
@@ -849,16 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc;n#AuthenticationWindowView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
@@ -880,9 +872,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="110" column="75" selection-start-line="110" selection-start-column="75" selection-end-line="110" selection-end-column="75" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc;n#AuthenticationWindowView#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

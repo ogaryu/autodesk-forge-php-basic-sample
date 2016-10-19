@@ -67,18 +67,11 @@ function OpenViewer(derivativeUrn) {
             documentId,
             function (doc) { // onLoadCallback
 
-                // documentJsonData = doc;
-                //
-                // geometryItems = Autodesk.Viewing.Document.getSubItemsWithProperties(doc.getRootItem(), {
-                //     'type': 'geometry',
-                // }, true);
-                //
-                // if (geometryItems.length > 0) {
-                //
-                //     viewerApp.load(doc.getViewablePath(geometryItems[0]), null, null, null, doc.acmSessionId /*session for DM*/);
-                // }
-                // viewer.loadDocumentWithItemAndObject(documentId);
-                viewerApp.loadDocumentWithItemAndObject(documentId);
+                var geometryItems = Autodesk.Viewing.Document.getSubItemsWithProperties(doc.getRootItem(), {
+                    'type': 'geometry',
+                }, true);
+
+                viewer.load(doc.getViewablePath(geometryItems[0]), null, null, null, doc.acmSessionId );
             },
             function (errorMsg) { // onErrorCallback
                 // showThumbnail(documentId.substr(4, documentId.length - 1));
