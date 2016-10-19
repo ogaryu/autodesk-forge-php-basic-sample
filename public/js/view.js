@@ -21,3 +21,4 @@ function AuthenticationWindowView(url, title, w, h) {
 
     return newWindow;
 }
+

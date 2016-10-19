@@ -23,12 +23,6 @@ var AjaxFormController = function() {
         if(formData == undefined || formData == ''){
             formData = {action: formActionStr};
         }
-
-        // $.ajaxSetup({
-        //     headers: {
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //     }
-        // });
         
         $.ajax({
             type: formMethod,
@@ -42,12 +36,15 @@ var AjaxFormController = function() {
                 console.log(data);
 
                 if(formActionStr == 'login'){
-                    // var data = JSON.parse(data);
                     var authWindow = AuthenticationWindowView(data['url'], "Autodesk Login", 800, 400);
                     authWindow.onload = function() {};
+
+                    ServerResponseData.setData(data['url']);
                 }
                 else if(formActionStr == 'logout'){
                     document.location.reload(true);
+
+                    ServerResponseData.setData(data);
                 }
                 else if(formActionStr == 'hub'){
                     var self = $("#hub-body").parent().find('.panel-heading');

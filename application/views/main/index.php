@@ -41,16 +41,16 @@
     </div>
     <div class="col-md-6">
         <div class="panel panel-result">
-            <div class="panel-heading">Request</div>
-            <div class="panel-body">
-                Panel content
+            <div class="panel-heading">Client Request</div>
+            <div class="panel-body" id="client-request-body">
+                <p></p>
             </div>
         </div>
-
+        
         <div class="panel panel-result">
-            <div class="panel-heading">Response</div>
-            <div class="panel-body">
-                Panel content
+            <div class="panel-heading">Server Response</div>
+            <div class="panel-body" id="server-response-body">
+                <p></p>
             </div>
         </div>
 

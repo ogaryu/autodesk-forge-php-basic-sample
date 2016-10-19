@@ -84,3 +84,8 @@ ul.error_list li {
 .form-horizontal {
     
 }
+
+.panel-body p{
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+}
