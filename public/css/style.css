@@ -113,6 +113,14 @@ ul.error_list li {
     width: 120px;
 }
 
+#client-request-body {
+    height: 184px;
+}
+
+#client-request-body pre {
+    height: 154px;
+}
+
 #server-response-body {
     height: 323px;
 }

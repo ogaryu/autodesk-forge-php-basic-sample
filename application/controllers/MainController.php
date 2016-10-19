@@ -116,6 +116,8 @@ class MainController extends Controller
                 
                 $client = new \GuzzleHttp\Client();
 
+                $this->view->endpoint = 'https://developer.api.autodesk.com/userprofile/v1/users/@me';
+
                 $response = $client->request('GET', 'https://developer.api.autodesk.com/userprofile/v1/users/@me', [
                     'headers' => [
                         'Authorization'      => 'Bearer ' . $this->session->get('token')

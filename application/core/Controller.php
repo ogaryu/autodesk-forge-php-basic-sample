@@ -85,7 +85,7 @@ abstract class Controller
             'session'  => $this->session,
         );
 
-        $view = new View($this->application->getViewDir(), $defaults);
+        $this->view = new View($this->application->getViewDir(), $defaults);
 
         if (is_null($template)) {
             $template = $this->action_name;
@@ -93,7 +93,7 @@ abstract class Controller
 
         $path = $this->controller_name . '/' .$template;
 
-        return $view->render($path, $variables, $layout);
+        return $this->view->render($path, $variables, $layout);
     }
     
     /**
