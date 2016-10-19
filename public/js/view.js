@@ -26,11 +26,11 @@ function OpenViewer(derivativeUrn) {
 
     var viewerApp;
 
-    var documentId = 'urn:<YOUR_URN_ID>';
+    var documentId = 'urn:' + derivativeUrn;
     
     var options = {
         'env' : 'AutodeskProduction',
-        'document' : 'urn:'+ derivativeUrn,
+        'document' : documentId,
         'getAccessToken': Get3LeggedToken,
         'refreshToken': Get3LeggedToken,
         'language': 'en'
