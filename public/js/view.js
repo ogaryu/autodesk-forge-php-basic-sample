@@ -25,8 +25,9 @@ function AuthenticationWindowView(url, title, w, h) {
 function OpenViewer(derivativeUrn) {
 
     var viewerApp;
-
     var documentId = 'urn:' + derivativeUrn;
+    var geometryItems = [];
+    var documentJsonData = '';
     
     var options = {
         'env' : 'AutodeskProduction',
@@ -60,8 +61,8 @@ function OpenViewer(derivativeUrn) {
                 }, true);
 
                 if (geometryItems.length > 0) {
-                    
-                    viewer.load(doc.getViewablePath(geometryItems[0]), null, null, null, doc.acmSessionId /*session for DM*/);
+
+                    viewerApp.load(doc.getViewablePath(geometryItems[0]), null, null, null, doc.acmSessionId /*session for DM*/);
                 }
                 // viewer.loadDocumentWithItemAndObject(documentId);
             },

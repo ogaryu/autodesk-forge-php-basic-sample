@@ -60,8 +60,8 @@
       <file leaf-file-name="view.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="63" column="103" selection-start-line="57" selection-start-column="32" selection-end-line="63" selection-end-column="103" />
+            <state relative-caret-position="90">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc;n#AuthenticationWindowView#0" expanded="false" />
               </folding>
@@ -522,7 +522,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475201646325</updated>
       <workItem from="1475201648317" duration="15457000" />
-      <workItem from="1476706472010" duration="53301000" />
+      <workItem from="1476706472010" duration="53467000" />
     </task>
     <servers />
   </component>
@@ -535,7 +535,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68758000" />
+    <option name="totallyTimeSpent" value="68924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1439" height="782" extended-state="0" />
@@ -877,8 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="63" column="103" selection-start-line="57" selection-start-column="32" selection-end-line="63" selection-end-column="103" />
+        <state relative-caret-position="90">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc;n#AuthenticationWindowView#0" expanded="false" />
           </folding>
