@@ -24,6 +24,14 @@ var AjaxFormController = function() {
             formData = {action: formActionStr};
         }
         
+        var clientRequestParam = "";
+        clientRequestParam += 'URL: ' + formActionUrl + '¥n';
+        clientRequestParam += 'Type: ' + formMethod + '¥n';
+        clientRequestParam += 'ContentType: ' + 'application/json' + '¥n';
+        clientRequestParam += 'Data: ' + formData + '¥n';
+        
+        ClientRequestData.setData(clientRequestParam);
+        
         $.ajax({
             type: formMethod,
             url : formActionUrl,
