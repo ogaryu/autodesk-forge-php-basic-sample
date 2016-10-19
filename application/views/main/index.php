@@ -10,17 +10,17 @@
                 <p>Request OAuth2 Authentication</p>
                 <div class="btn-toolbar" role="toolbar">
                     <div class="btn-group">
-                        <form action="<?php echo $base_url; ?>/login" method="POST" class="ajaxform">
+                        <form action="<?php echo $base_url; ?>/login" method="POST" class="ajaxform" data-request-action="login">
                             <button type="submit" class="btn btn-default">LOGIN</button>
                         </form>
                     </div>
                     <div class="btn-group">
-                        <form action="<?php echo $base_url; ?>/userprofile" method="GET" class="ajaxform">
+                        <form action="<?php echo $base_url; ?>/userprofile" method="GET" class="ajaxform" data-request-action="userprofile">
                             <button type="submit" class="btn btn-default">GET USER PROFILE</button>
                         </form>
                     </div>
                     <div class="btn-group">
-                        <form action="<?php echo $base_url; ?>/logout" method="POST" class="ajaxform">
+                        <form action="<?php echo $base_url; ?>/logout" method="POST" class="ajaxform" data-request-action="logout">
                             <button type="submit" class="btn btn-default">LOGOUT</button>
                         </form>
                     </div>
@@ -35,7 +35,7 @@
                 <p>Request A360 Data Information</p>
                 <div class="btn-toolbar" role="toolbar">
                     <div class="btn-group">
-                        <form action="<?php echo $base_url; ?>/hubs" method="GET" class="ajaxform">
+                        <form action="<?php echo $base_url; ?>/hubs" method="GET" class="ajaxform" data-request-action="hubs">
                             <button type="submit" class="btn btn-default">GET HUB</button>
                         </form>
                     </div>
@@ -45,7 +45,7 @@
                         <span class="input-group-addon" id="addon-hub-id">Hub Id</span>
                         <input type="text" id="hub-id" class="form-control" placeholder="Hub Id" aria-describedby="addon-hub-id">
                         <span class="input-group-btn">
-                            <form action="<?php echo $base_url; ?>/projects/{#hub-id}" method="GET" class="ajaxform">
+                            <form action="<?php echo $base_url; ?>/projects/{#hub-id}" method="GET" class="ajaxform" data-request-action="projects">
                                 <button type="submit" class="btn btn-default">GET PROJECT</button>
                             </form>
                         </span>

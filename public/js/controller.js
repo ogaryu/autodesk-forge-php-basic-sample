@@ -13,7 +13,7 @@ var AjaxFormController = function() {
         var form = $(this);
         var formData = form.serialize();
         var formActionUrl = form.attr('action');
-        var formActionStr = formActionUrl.substr(1);
+        var formRequestAction = form.attr('data-request-type');
         var formMethod = form.attr('method');
 
         if(formMethod == undefined || formMethod == ''){
@@ -66,31 +66,31 @@ var AjaxFormController = function() {
                         return ;
                     }
                 }
-                else if(formActionStr == 'logout'){
+                else if(formRequestAction == 'logout'){
                     
                     //document.location.reload(true);
                     ServerResponseData.setData(data);
                 }
-                else if(formActionStr == 'userprofile'){
+                else if(formRequestAction == 'userprofile'){
                     
                     ServerResponseData.setData(data);
                 }
-                else if(formActionStr == 'hubs'){
+                else if(formRequestAction == 'hubs'){
 
                     ServerResponseData.setData(data);
                 }
-                else if(formActionStr == 'projects'){
+                else if(formRequestAction == 'projects'){
                     
                     ServerResponseData.setData(data);
                 }
-                else if(formActionStr == 'items'){
+                else if(formRequestAction == 'items'){
                     $("#items-body").html(data);
                     $('.panel .panel-heading').next().slideUp();
                     $("#items-body").slideDown();
                     setAjaxForm();
                     setViewer();
                 }
-                else if(formActionStr == 'issues'){
+                else if(formRequestAction == 'issues'){
                     $("#issues-body").html(data);
                     $('.panel .panel-heading').next().slideUp();
                     $("#issues-body").slideDown();
