@@ -91,7 +91,7 @@ ul.error_list li {
 .panel-body pre {
     word-wrap:break-word;
     overflow-wrap:break-word;
-    max-height: 282px;
+    max-height: 310px;
 }
 
 .btn-toolbar {
@@ -115,5 +115,5 @@ ul.error_list li {
 }
 
 #server-response-body {
-    max-height: 322px;
+    max-height: 338px;
 }
