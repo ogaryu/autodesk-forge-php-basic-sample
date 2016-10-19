@@ -28,7 +28,7 @@ var AjaxFormController = function() {
         clientRequestParam += '<p>URL: ' + formActionUrl + '</p>';
         clientRequestParam += '<p>Type: ' + formMethod + '</p>';
         clientRequestParam += '<p>ContentType: ' + 'application/json' + '</p>';
-        clientRequestParam += '<p>Data: ' + JSON.stringify(formData) + '</p>';
+        clientRequestParam += '<p>Data: ' + form.serialize() + '</p>';
         
         ClientRequestData.setData(clientRequestParam);
         
@@ -55,7 +55,8 @@ var AjaxFormController = function() {
                     }
                 }
                 else if(formActionStr == 'logout'){
-                    document.location.reload(true);
+                    
+                    //document.location.reload(true);
 
                     ServerResponseData.setData('<p>' + data + '</p>');
                 }
