@@ -54,8 +54,7 @@ function OpenViewer(derivativeUrn) {
     //    
     //     viewerApp = new Autodesk.A360ViewingApplication('viewer-div');
     //     viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D);
-    //     //viewerApp.loadDocumentWithItemAndObject(documentId);
-    //     loadDocument(options.document);
+    //     viewerApp.loadDocumentWithItemAndObject(documentId);
     //
     // });
     
