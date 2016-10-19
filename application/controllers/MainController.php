@@ -104,8 +104,8 @@ class MainController extends Controller
             // Failed to get the access token or user details.
             exit($e->getMessage());
         }
-
-        return '<script>window.opener.location.reload(false);window.close();</script>';
+//        return '<script>window.opener.location.reload(false);window.close();</script>';
+        return '<script>window.close();</script>';
     }
     
 }

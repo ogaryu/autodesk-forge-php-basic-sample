@@ -43,8 +43,6 @@ var AjaxFormController = function() {
                     authWindow.onload = function() {};
                     authWindow.onbeforeunload = function(){
 
-                        
-                        
                         return ;
                     }
                 }
