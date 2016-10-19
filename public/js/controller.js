@@ -65,11 +65,13 @@ var AjaxFormController = function() {
                     ServerResponseData.setData(data);
                 }
                 else if(formActionStr == 'hub'){
-                    var self = $("#hub-body").parent().find('.panel-heading');
-                    $("#hub-body").html(data);
-                    $('.panel .panel-heading').not(self).next().slideUp();
-                    $("#hub-body").slideDown();
-                    setAjaxForm();
+
+                    ServerResponseData.setData(data);
+                    // var self = $("#hub-body").parent().find('.panel-heading');
+                    // $("#hub-body").html(data);
+                    // $('.panel .panel-heading').not(self).next().slideUp();
+                    // $("#hub-body").slideDown();
+                    // setAjaxForm();
                 }
                 else if(formActionStr == 'projects'){
                     $("#projects-body").html(data);

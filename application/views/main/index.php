@@ -32,7 +32,14 @@
         <div class="panel panel-primary">
             <div class="panel-heading">Data Management API</div>
             <div class="panel-body">
-                Panel content
+                <p>Request A360 Data Information</p>
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="btn-group">
+                        <form action="<?php echo $base_url; ?>/hub" method="GET" class="ajaxform">
+                            <button type="submit" class="btn btn-default">GET HUB</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -62,7 +69,6 @@
         <div class="panel panel-result">
             <div class="panel-heading">Content</div>
             <div class="panel-body">
-                Panel content
             </div>
         </div>
     </div>
