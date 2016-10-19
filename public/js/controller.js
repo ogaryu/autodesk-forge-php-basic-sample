@@ -20,9 +20,9 @@ var AjaxFormController = function() {
             formMethod = 'GET';
         }
         
-        if(formData == undefined || formData == ''){
-            formData = {action: formActionStr};
-        }
+        // if(formData == undefined || formData == ''){
+        //     formData = {action: formActionStr};
+        // }
         
         if(formActionUrl.indexOf('{') != -1){
             
