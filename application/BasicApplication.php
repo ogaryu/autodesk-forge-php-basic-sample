@@ -30,6 +30,8 @@ class BasicApplication extends Application
         => array('controller' => 'main', 'action' => 'logout'),
         '/oauth/callback'
         => array('controller' => 'main', 'action' => 'getAccessToken'),
+        '/userprofile'
+        => array('controller' => 'main', 'action' => 'getUserProfile'),
         '/user/:user_name'
         => array('controller' => 'status', 'action' => 'user'),
         '/user/:user_name/status/:id'

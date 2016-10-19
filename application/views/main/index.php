@@ -7,11 +7,16 @@
         <div class="panel panel-primary">
             <div class="panel-heading">Authentication</div>
             <div id="forge-authentication" class="panel-body">
-                <p>Request OAuth2 authentication</p>
+                <p>Request OAuth2 Authentication</p>
                 <div class="btn-toolbar" role="toolbar">
                     <div class="btn-group">
                         <form action="<?php echo $base_url; ?>/login" method="POST" class="ajaxform">
                             <button type="submit" class="btn btn-default">LOGIN</button>
+                        </form>
+                    </div>
+                    <div class="btn-group">
+                        <form action="<?php echo $base_url; ?>/userprofile" method="GET" class="ajaxform">
+                            <button type="submit" class="btn btn-default">GET USER PROFILE</button>
                         </form>
                     </div>
                     <div class="btn-group">

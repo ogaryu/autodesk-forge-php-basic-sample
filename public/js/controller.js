@@ -57,7 +57,10 @@ var AjaxFormController = function() {
                 else if(formActionStr == 'logout'){
                     
                     //document.location.reload(true);
-
+                    ServerResponseData.setData('<p>' + data + '</p>');
+                }
+                else if(formActionStr == 'userprofile'){
+                    
                     ServerResponseData.setData('<p>' + data + '</p>');
                 }
                 else if(formActionStr == 'hub'){

@@ -19,7 +19,6 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-
         return $this->render();
     }
 
@@ -106,6 +105,35 @@ class MainController extends Controller
         }
 //        return '<script>window.opener.location.reload(false);window.close();</script>';
         return '<script>window.close();</script>';
+    }
+    
+    public function getUserProfileAction(){
+
+        $content = "";
+
+        if($this->session->get('token') != null){
+            try {
+                
+                $client = new \GuzzleHttp\Client();
+
+                $response = $client->request('GET', 'https://developer.api.autodesk.com/userprofile/v1/users/@me', [
+                    'headers' => [
+                        'Authorization'      => 'Bearer ' . $this->session->get('token')
+                    ],
+                    'on_stats' => function (TransferStats $stats) use (&$url) {
+                        $url = $stats->getEffectiveUri();
+                    }
+                ]);
+            } catch (RequestException $e) {
+                return redirect('/')->with('message', $e->getMessage());
+            }
+
+            $content = $response->getBody()->getContents();
+//            $profile = json_decode($response->getBody(), true);
+        }
+
+        return $this->json_response(200, $content);
+        
     }
     
 }
