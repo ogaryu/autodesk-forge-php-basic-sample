@@ -32,14 +32,18 @@ https://devcenter.heroku.com/articles/deploying-php
 Client-side calls serveral ajax requests to its server with RESTful API.
 
 HTML view is composed with layout.php and views/main.php.
+
 Ajax requests are defined in controller.js to catch submit event of each forms.
 
 Server-side calls Autodesk Forge APIs and manage token on a session.
 
 index.php calls bootstrap.php and BasicApplication.php, and instanciate app.
+
 bootstrap.php instantiate core classes through ClassManager.
+
 BasicApplication.php defines routes to call controller and its method.
-MainController.php is a mainly call Autodesk Forge APIs and return its response to client.
+
+MainController.php mainly calls Autodesk Forge APIs and return its response to client.
 
 ## License
 This software is released under the MIT License, see LICENSE.txt.
